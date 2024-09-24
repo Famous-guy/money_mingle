@@ -9,8 +9,10 @@ class DownloadButton extends StatelessWidget {
     super.key,
     this.logo,
     this.logoText,
-    this.downloadLogoText,
+    this.downloadLogoText, this.isSmall,
   });
+  final bool? isSmall;
+  // final bool? isPlaystore;
   final String? logo;
   final String? logoText;
   final String? downloadLogoText;
@@ -26,6 +28,8 @@ class DownloadButton extends StatelessWidget {
           width: 1,
           color: ColorsTheme.grey1,
         ),
+         color: (isSmall ?? false) ? ColorsTheme.black :null,
+        
         borderRadius: BorderRadius.circular(
           7,
         ),
@@ -36,6 +40,8 @@ class DownloadButton extends StatelessWidget {
         children: [
           SvgPicture.string(
             logo ?? SvgConfig.apple,
+            // height:  (isSmall ?? false) && (isPlaystore ?? false) ? 27.27 : (isSmall ?? false) ? 21.41 : null,
+            // width: (isSmall ?? false) && (isPlaystore ?? false) ? 30.48 : (isSmall ?? false) ? 26.31 : null,
           ),
           7.44.he,
           Column(
