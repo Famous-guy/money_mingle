@@ -156,7 +156,7 @@ class _LandingPageState extends State<LandingPage> {
                               ),
                             ),
                           ],
-                        ),
+                        
                       ),
                       88.he,
                       Expanded(
