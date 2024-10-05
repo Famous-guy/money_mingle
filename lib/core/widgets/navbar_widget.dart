@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../config/config.dart';
 import '../core.dart';
@@ -17,6 +18,9 @@ class MoneyMingleNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenwidth = MediaQuery.of(
+      context,
+    ).size.width;
     return Container(
       decoration: BoxDecoration(
         color: Color(
@@ -55,38 +59,54 @@ class MoneyMingleNavBar extends StatelessWidget {
                   style: CustomFontStyle.title40,
                 ),
               ),
-              Row(
-                children: List.generate(
-                  tabs.length,
-                  (index) {
-                    return Padding(
-                      padding: EdgeInsets.only(
-                        right: index != tabs.length - 1 ? 50 : 0,
-                      ),
-                      child: Text(
-                        tabs[index],
-                        style: CustomFontStyle.label,
-                      ),
-                    );
-                  },
+              Visibility(
+                visible: !(screenwidth <= 1084),
+                child: Row(
+                  children: List.generate(
+                    tabs.length,
+                    (index) {
+                      return Padding(
+                        padding: EdgeInsets.only(
+                          right: screenwidth <= 1124 && index != tabs.length - 1
+                              ? 30
+                              : index != tabs.length - 1
+                                  ? 50
+                                  : 0,
+                        ),
+                        child: Text(
+                          tabs[index],
+                          style: CustomFontStyle.label,
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 32,
-                  vertical: 14,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                    100,
+              Visibility(
+                visible: !(screenwidth <= 1084),
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 32,
+                    vertical: 14,
                   ),
-                  color: ColorsTheme.primaryColor,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      100,
+                    ),
+                    color: ColorsTheme.primaryColor,
+                  ),
+                  child: Text(
+                    'Download App',
+                    style: CustomFontStyle.label2,
+                  ),
                 ),
-                child: Text(
-                  'Download App',
-                  style: CustomFontStyle.label2,
-                ),
-              )
+              ),
+              // Visibility(
+              //   visible: screenwidth <= 1084,
+              //   child: SvgPicture.string(
+              //     SvgConfig.menu,
+              //   ),
+              // ),
             ],
           ),
         ),

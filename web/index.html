@@ -1,38 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+  <html lang="en">
+    <!-- Added language attribute -->
+    <head>
+      <base href="/" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+      <meta charset="UTF-8" />
+      <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+      <meta
+        name="description"
+        content="Money Mingle connects hustlers seeking quick cash with businesses needing real-time insights. Users earn rewards for completing tasks that help businesses thrive."
+      />
+      <meta
+        name="keywords"
+        content="money mingle, Mingle, Money, Monkey Mingle, Mingre, mindle, how to make money in 2024/2025, hustlers, business, Money Mingle, Moneymingle, MoneyMingle App, Mingle App, Money App, Money Management, Mingle, Money Management Tools, finance app, money management platform"
+      />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+      <link rel="canonical" href="https://moneymingle.app/" />
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
+      <meta property="og:title" content="Money Mingle App" />
+      <meta
+        property="og:description"
+        content="Money Mingle connects hustlers seeking quick cash with businesses needing real-time insights. Users earn rewards for completing tasks that help businesses thrive.
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+"
+      />
+      <meta property="og:url" content="https://moneymingle.app/" />
+      <meta
+        property="og:image"
+        content="https://moneymingle.app/icons/logo.png"
+      />
+      <!--   <meta property="og:type" content="website"> -->
+      <meta name="author" content="Money Mingle" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Money Mingle App" />
+      <meta
+        name="twitter:description"
+        content="Moneymingle helps you earn money, anytime, anywhere. Explore the app now!"
+      />
+      <meta
+        name="twitter:image"
+        content="https://moneymingle.app/icons/logo.png"
+      />
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="moneymingle_web">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+      <!-- iOS meta tags & icons -->
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+      <meta name="apple-mobile-web-app-title" content="Money Mingle" />
+      <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
-  <title>moneymingle_web</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="favicon.png" />
+
+      <title>Money Mingle</title>
+      <link rel="manifest" href="manifest.json" />
+
+      <style>
+        /* Hide the headings visually but keep them for SEO */
+        h1,
+        h2 {
+          position: absolute; /* Position off-screen */
+          left: -9999px; /* Move out of view */
+        }
+      </style>
+
+      <!-- Structured Data -->
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Money Mingle",
+          "url": "https://moneymingle.app/",
+          "logo": "https://moneymingle.app/icons/logo.png",
+          "description": "Moneymingle helps you earn money, anytime, anywhere. Explore the app now!",
+          "sameAs": [
+            "https://www.youtube.com/@fun.moneymingle",
+            "https://x.com/money_mingle"
+          ]
+        }
+      </script>
+    </head>
+    <body>
+      <script src="flutter_bootstrap.js" async></script>
+    </body>
+  </html>
 </html>

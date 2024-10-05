@@ -73,14 +73,14 @@ class _LandingPageState extends State<LandingPage> {
   ];
   List<PanelItem> _panelData = [
     PanelItem(
-      title: 'Can I use the service for business transactions?',
+      title: 'How quickly can I earn?',
       description:
-          'Yes, our platform supports both personal and business transactions. Businesses can benefit from our secure and efficient transfer options tailored to their needs.',
+          'As soon as you complete a task! Tasks take just minutes, and you can cash out immediately.',
     ),
     PanelItem(
-      title: 'What is the maximum amount I can transfer?',
+      title: 'What tasks are available?',
       description:
-          'The maximum transfer amount depends on your account type and location.',
+          'Tasks range from watching videos, taking surveys, downloading apps, and engaging with social media content.',
     ),
     PanelItem(
       title: 'How do I update my account information?',
@@ -88,14 +88,14 @@ class _LandingPageState extends State<LandingPage> {
           'You can update your account information through the account settings.',
     ),
     PanelItem(
-      title: 'Are there any benefits for frequent users?',
+      title: 'How do businesses benefit?',
       description:
-          'Yes, frequent users can enjoy discounted transaction fees and exclusive offers.',
+          'Businesses get real-time feedback, social engagement, and marketing insights tailored to their target audience.',
     ),
     PanelItem(
-      title: 'Can I access my account from multiple devices?',
+      title: 'Are there any minimum payout thresholds?',
       description:
-          'Yes, you can access your account from any device with a secure login.',
+          'The minimum payout is \$5, you can cash out instantly using your choice withdrawal method.',
     ),
   ];
 
