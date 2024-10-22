@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_seo/flutter_seo.dart';
 import 'package:moneymingle_web/core/core.dart';
 
 import '../../config/config.dart';
-
 
 class Features extends StatelessWidget {
   const Features({
@@ -35,11 +35,15 @@ class Features extends StatelessWidget {
                 ),
                 16.ve,
                 Text(
-                  'Upload tasks and get your brand seen by thousands. Create social buzz, grow your audience, and increase conversions. ',
-                  style: CustomFontStyle.label.copyWith(
-                    color: ColorsTheme.grey50,
-                  ),
-                ),
+                    'Upload tasks and get your brand seen by thousands. Create social buzz, grow your audience, and increase conversions. ',
+                    style: CustomFontStyle.label.copyWith(
+                      color: ColorsTheme.grey50,
+                    ),
+                    key: SeoKey(
+                      TagType.h1,
+                      text:
+                          'Upload tasks and get your brand seen by thousands. Create social buzz, grow your audience, and increase conversions.',
+                    )),
                 40.ve,
                 Column(
                   children: features.map(

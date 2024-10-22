@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_seo/flutter_seo.dart';
 import 'package:moneymingle_web/core/core.dart';
 
 import '../../config/config.dart';
@@ -22,6 +23,7 @@ class HowItWorks extends StatelessWidget {
             style: CustomFontStyle.title50.copyWith(
               fontSize: 40,
             ),
+            key: SeoKey(TagType.h1, text: "Why Choose MoneyMingle?"),
           ),
           20.he,
           Text(
@@ -29,6 +31,7 @@ class HowItWorks extends StatelessWidget {
             style: CustomFontStyle.label4.copyWith(
               color: ColorsTheme.grey40,
             ),
+            key: SeoKey(TagType.p, text: "Make Every Minute Count. Join thousands of users earning real cash."),
           ),
           64.ve,
           IntrinsicHeight(
@@ -57,6 +60,7 @@ class HowItWorks extends StatelessWidget {
                   label:
                       'Enjoy the gamified experience, complete daily challenges, and compete on leaderboards for extra rewards.',
                   title: 'Fun and Competitive',
+                   key: SeoKey(TagType.p, text: "Enjoy the gamified experience, complete daily challenges, and compete on leaderboards for extra rewards."),
                 ),
                 48.he,
                 // Second container taking its natural width
@@ -71,6 +75,7 @@ class HowItWorks extends StatelessWidget {
                         style: CustomFontStyle.title50.copyWith(
                           fontWeight: FontWeight.w600,
                         ),
+                        key: SeoKey(TagType.p, text: "Instant Payments"),
                       ),
                     ),
                     label: Text(
@@ -78,6 +83,7 @@ class HowItWorks extends StatelessWidget {
                       style: CustomFontStyle.label.copyWith(
                         color: ColorsTheme.grey50,
                       ),
+                      key: SeoKey(TagType.p, text: "No waiting. Cash out instantly with flexible payout options."),
                     ),
                     child: Image.asset(
                       PngConfig.paySupport,

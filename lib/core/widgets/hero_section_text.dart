@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_seo/flutter_seo.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../config/config.dart';
@@ -126,6 +127,8 @@ class HeroSectionText extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: CustomFontStyle.label.copyWith(
                     color: ColorsTheme.primaryWhite50,
+                  ),
+                  key: SeoKey(TagType.h1, text: 'Make money in minutes with fun, easy tasks. From watching videos to taking surveys, Money Mingle lets you earn cash anytime, anywhere.',
                   ),
                 ),
               ),

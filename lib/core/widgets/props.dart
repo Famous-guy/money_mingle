@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_seo/flutter_seo.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:moneymingle_web/core/core.dart';
 
@@ -71,6 +72,7 @@ class FirstCard extends StatelessWidget {
                           color: ColorsTheme.darkBlue,
                           fontWeight: FontWeight.w600,
                         ),
+                        key: SeoKey(TagType.h1, text: "Earn Cash with"),
                       ),
                   Visibility(
                     visible: title == null,
@@ -80,6 +82,7 @@ class FirstCard extends StatelessWidget {
                         color: ColorsTheme.darkBlue,
                         fontWeight: FontWeight.w600,
                       ),
+                      key: SeoKey(TagType.h1, text: "Minimal Effort"),
                     ),
                   ),
                   12.ve,
@@ -89,6 +92,9 @@ class FirstCard extends StatelessWidget {
                         style: CustomFontStyle.label.copyWith(
                           color: ColorsTheme.black.withOpacity(0.64),
                         ),
+                        key: SeoKey(TagType.p,
+                            text:
+                                "Turn spare minutes into cash with quick, engaging tasks. No special skills required!"),
                       ),
                 ],
               ),

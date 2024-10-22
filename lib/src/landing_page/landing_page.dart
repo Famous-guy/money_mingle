@@ -2,7 +2,9 @@
 
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:meta_seo/meta_seo.dart';
 
 import 'package:moneymingle_web/core/core.dart';
 
@@ -104,7 +106,37 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     const radians = pi / 180;
+    if (kIsWeb) {
+      // Define MetaSEO object
+      MetaSEO meta = MetaSEO();
+      // add meta seo data for web app as you want
+      meta.author(author: 'EMoney Mingle');
+      meta.description(
+          description:
+              'Money Mingle connects hustlers seeking quick cash with businesses needing real-time insights. Users earn rewards for completing tasks that help businesses thrive.');
+      meta.keywords(
+          keywords:
+              'money mingle, Mingle, Money, Monkey Mingle, Mingre, mindle, how to make money in 2024/2025, hustlers, business, Money Mingle, Moneymingle, MoneyMingle App, Mingle App, Money App, Money Management, Mingle, Money Management Tools, finance app, money management platform, moneymingleapp, moneymingle, money mingle app, app, mingle, money, mingle app');
+      meta.ogTitle(ogTitle: 'MoneyMingle');
+      meta.ogDescription(
+          ogDescription:
+              'Moneymingle helps you earn money, anytime, anywhere. Explore the app now!');
+      meta.ogImage(ogImage: 'https://moneymingle.app/icons/logo.png');
 
+      // here you can add any tags does not exist in the package as this
+      meta.propertyContent(property: 'og:site_name', content: 'MoneyMingle');
+
+      // or if you want to add twitter card meta tags just as the following
+      meta.twitterCard(twitterCard: TwitterCard.summaryLargeImage);
+      meta.twitterTitle(twitterTitle: 'MoneyMingle');
+      meta.twitterDescription(
+          twitterDescription:
+              'Moneymingle helps you earn money, anytime, anywhere. Explore the app now!');
+      meta.twitterImage(twitterImage: 'https://moneymingle.app/icons/logo.png');
+
+      // here you can add any tags does not exist in the package as this
+      meta.nameContent(name: 'twitter:site', content: '@money_mingle');
+    }
     return Scaffold(
       backgroundColor: ColorsTheme.black,
       body: Stack(

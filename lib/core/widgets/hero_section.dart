@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_seo/flutter_seo.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:moneymingle_web/core/core.dart';
 
@@ -64,6 +65,7 @@ class HeroSection extends StatelessWidget {
                         style: CustomFontStyle.label.copyWith(
                           color: ColorsTheme.primaryWhite50,
                         ),
+                         key: SeoKey(TagType.p, text: "Over 20k+ tasks"),
                       ),
                     ],
                   ),
@@ -75,6 +77,7 @@ class HeroSection extends StatelessWidget {
                 child: Transform.rotate(
                   angle: -6.08 * radians,
                   child: Container(
+                     key: SeoKey(TagType.div,),
                     padding: const EdgeInsets.all(
                       24,
                     ),
@@ -105,6 +108,7 @@ class HeroSection extends StatelessWidget {
                               style: CustomFontStyle.label.copyWith(
                                 color: ColorsTheme.grey50,
                               ),
+                               key: SeoKey(TagType.p, text: "Total Payout",),
                             ),
                             3.95.he,
                             SvgPicture.string(
@@ -118,6 +122,7 @@ class HeroSection extends StatelessWidget {
                           style: CustomFontStyle.title50.copyWith(
                             color: ColorsTheme.primaryWhite50,
                           ),
+                           key: SeoKey(TagType.p, text: "\$20.98M"),
                         ),
                         24.ve,
                         Row(
@@ -144,6 +149,7 @@ class HeroSection extends StatelessWidget {
                               style: CustomFontStyle.label.copyWith(
                                 color: ColorsTheme.primaryWhite50,
                               ),
+                              key: SeoKey(TagType.p, text: "+234.45% weekly"),
                             ),
                           ],
                         ),
@@ -175,6 +181,7 @@ class HeroSection extends StatelessWidget {
                             style: CustomFontStyle.label.copyWith(
                               color: ColorsTheme.grey50,
                             ),
+                            key: SeoKey(TagType.p, text: "Average earning "),
                           ),
                           3.95.he,
                           SvgPicture.string(
