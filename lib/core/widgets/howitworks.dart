@@ -4,7 +4,6 @@ import 'package:moneymingle_web/core/core.dart';
 
 import '../../config/config.dart';
 
-
 class HowItWorks extends StatelessWidget {
   const HowItWorks({
     super.key,
@@ -31,7 +30,9 @@ class HowItWorks extends StatelessWidget {
             style: CustomFontStyle.label4.copyWith(
               color: ColorsTheme.grey40,
             ),
-            key: SeoKey(TagType.p, text: "Make Every Minute Count. Join thousands of users earning real cash."),
+            key: SeoKey(TagType.p,
+                text:
+                    "Make Every Minute Count. Join thousands of users earning real cash."),
           ),
           64.ve,
           IntrinsicHeight(
@@ -60,7 +61,9 @@ class HowItWorks extends StatelessWidget {
                   label:
                       'Enjoy the gamified experience, complete daily challenges, and compete on leaderboards for extra rewards.',
                   title: 'Fun and Competitive',
-                   key: SeoKey(TagType.p, text: "Enjoy the gamified experience, complete daily challenges, and compete on leaderboards for extra rewards."),
+                  key: SeoKey(TagType.p,
+                      text:
+                          "Enjoy the gamified experience, complete daily challenges, and compete on leaderboards for extra rewards."),
                 ),
                 48.he,
                 // Second container taking its natural width
@@ -83,10 +86,12 @@ class HowItWorks extends StatelessWidget {
                       style: CustomFontStyle.label.copyWith(
                         color: ColorsTheme.grey50,
                       ),
-                      key: SeoKey(TagType.p, text: "No waiting. Cash out instantly with flexible payout options."),
+                      key: SeoKey(TagType.p,
+                          text:
+                              "No waiting. Cash out instantly with flexible payout options."),
                     ),
                     child: Image.asset(
-                      PngConfig.paySupport,
+                      PngConfig.paySupport1,
                       width: 368.14,
                       height: 299.1,
                     ),

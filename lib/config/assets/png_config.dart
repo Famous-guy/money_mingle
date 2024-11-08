@@ -15,5 +15,8 @@ class PngConfig {
   static String overlay = '$baseUrl/overlay.png';
   static String pay = '$baseUrl/pay.png';
   static String paySupport = '$baseUrl/paySupport.png';
+  static String paySupport1 = '$baseUrl/paysupport1.png';
   static String avartar = '$baseUrl/avartar.png';
+  static String ton = '$baseUrl/ton.png';
+  static String ton1 = '$baseUrl/ton1.png';
 }

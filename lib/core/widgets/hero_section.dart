@@ -15,9 +15,16 @@ class HeroSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 100.0,
+      padding: EdgeInsets.symmetric(
+        horizontal: size.width < 700
+            ? 24
+            :
+            //     : size.width < 1344
+            //         ? 80
+            //         :
+            100.0,
       ),
       child: Column(
         children: [
@@ -28,7 +35,17 @@ class HeroSection extends StatelessWidget {
               Center(
                 child: Image.asset(
                   PngConfig.task,
-                  width: 384,
+                  width: size.width < 600
+                      ? 161.06
+                      : size.width < 786
+                          ? 200
+                          : size.width < 843
+                              ? 250
+                              : size.width < 1084
+                                  ? 300
+                                  : size.width < 1222
+                                      ? 350
+                                      : 384,
                   height: 357,
                 ),
               ),
@@ -65,7 +82,7 @@ class HeroSection extends StatelessWidget {
                         style: CustomFontStyle.label.copyWith(
                           color: ColorsTheme.primaryWhite50,
                         ),
-                         key: SeoKey(TagType.p, text: "Over 20k+ tasks"),
+                        key: SeoKey(TagType.p, text: "Over 20k+ tasks"),
                       ),
                     ],
                   ),
@@ -77,7 +94,9 @@ class HeroSection extends StatelessWidget {
                 child: Transform.rotate(
                   angle: -6.08 * radians,
                   child: Container(
-                     key: SeoKey(TagType.div,),
+                    key: SeoKey(
+                      TagType.div,
+                    ),
                     padding: const EdgeInsets.all(
                       24,
                     ),
@@ -108,7 +127,10 @@ class HeroSection extends StatelessWidget {
                               style: CustomFontStyle.label.copyWith(
                                 color: ColorsTheme.grey50,
                               ),
-                               key: SeoKey(TagType.p, text: "Total Payout",),
+                              key: SeoKey(
+                                TagType.p,
+                                text: "Total Payout",
+                              ),
                             ),
                             3.95.he,
                             SvgPicture.string(
@@ -122,7 +144,7 @@ class HeroSection extends StatelessWidget {
                           style: CustomFontStyle.title50.copyWith(
                             color: ColorsTheme.primaryWhite50,
                           ),
-                           key: SeoKey(TagType.p, text: "\$20.98M"),
+                          key: SeoKey(TagType.p, text: "\$20.98M"),
                         ),
                         24.ve,
                         Row(
@@ -159,7 +181,19 @@ class HeroSection extends StatelessWidget {
                 ),
               ),
               Positioned(
-                right: 200,
+                right:
+                    // size.width < 600
+                    //     ? 161.06
+                    //     : size.width < 786
+                    //         ? 200
+                    //         : size.width < 843
+                    //             ? 250
+                    //             : size.width < 1084
+                    //                 ? 300
+                    // :
+                    // size.width < 1222 ? 350 :
+                    //  384
+                    200,
                 top: 5,
                 child: Container(
                   padding: const EdgeInsets.all(

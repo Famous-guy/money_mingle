@@ -128,8 +128,15 @@ class FirstCard extends StatelessWidget {
                               detailsCard(),
                               SizedBox(height: 5), // Use SizedBox for spacing
                               detailsCard(
-                                amount: '+\$200',
+                                amount: '+\$50M',
                                 image: PngConfig.pay,
+                              ),
+                              5.ve,
+                              detailsCard(
+                                amount: '+\$20M',
+                                image: PngConfig.ton1,
+                                width: 30,
+                                height: 30,
                               ),
                             ],
                           ),
@@ -224,7 +231,11 @@ class detailsCard extends StatelessWidget {
     super.key,
     this.image,
     this.amount,
+    this.height,
+    this.width,
   });
+  final double? height;
+  final double? width;
   final String? image;
   final String? amount;
   @override
@@ -277,8 +288,8 @@ class detailsCard extends StatelessWidget {
                     true
                 ? Image.asset(
                     image!,
-                    height: 9.53,
-                    width: 44.28,
+                    height: height ?? 9.53,
+                    width: width ?? 44.28,
                   )
                 : SvgPicture.string(
                     image ?? SvgConfig.masterCard,

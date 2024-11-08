@@ -12,11 +12,16 @@ class HeroSectionText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 157.0,
+          padding: EdgeInsets.symmetric(
+            horizontal: size.width < 1166
+                ? 0
+                : size.width < 1344
+                    ? 80
+                    : 157.0,
           ),
           child: Column(
             children: [
@@ -62,7 +67,10 @@ class HeroSectionText extends StatelessWidget {
                           style: CustomFontStyle.label2.copyWith(
                             color: ColorsTheme.primaryWhite50,
                             fontWeight: FontWeight.w400,
+                            fontSize: size.width < 442 ? 14 : null,
                           ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
                         ),
                       ],
                     ),
@@ -73,8 +81,18 @@ class HeroSectionText extends StatelessWidget {
               Text.rich(
                 textAlign: TextAlign.center,
                 TextSpan(
-                  style:
-                      CustomFontStyle.title, // Your custom style for the text
+                  style: CustomFontStyle.title.copyWith(
+                    height: 1.2,
+                    fontSize: size.width < 665
+                        ? 30
+                        : size.width < 714
+                            ? 35
+                            : size.width < 907
+                                ? 40
+                                : size.width < 1079
+                                    ? 50
+                                    : null,
+                  ), // Your custom style for the text
 
                   children: [
                     const TextSpan(
@@ -90,8 +108,18 @@ class HeroSectionText extends StatelessWidget {
                             Constant.gradiantFill().createShader(bounds),
                         child: Text(
                           'Money ',
-                          style: CustomFontStyle
-                              .title, // Your custom style for the text
+                          style: CustomFontStyle.title.copyWith(
+                            height: 1.2,
+                            fontSize: size.width < 714
+                                ? 35
+                                : size.width < 714
+                                    ? 35
+                                    : size.width < 907
+                                        ? 40
+                                        : size.width < 1079
+                                            ? 50
+                                            : null,
+                          ), // Your custom style for the text
                         ),
                       ),
                     ),
@@ -106,8 +134,18 @@ class HeroSectionText extends StatelessWidget {
                             Constant.gradiantFill().createShader(bounds),
                         child: Text(
                           'Businesses ',
-                          style: CustomFontStyle
-                              .title, // Your custom style for the text
+                          style: CustomFontStyle.title.copyWith(
+                            height: 1.2,
+                            fontSize: size.width < 714
+                                ? 35
+                                : size.width < 714
+                                    ? 35
+                                    : size.width < 907
+                                        ? 40
+                                        : size.width < 1079
+                                            ? 50
+                                            : null,
+                          ), // Your custom style for the text
                         ),
                       ),
                     ),
@@ -119,8 +157,18 @@ class HeroSectionText extends StatelessWidget {
               ),
               16.ve,
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 183.0,
+                padding: EdgeInsets.symmetric(
+                  horizontal: size.width < 493
+                      ? 0
+                      : size.width < 547
+                          ? 30
+                          : size.width < 775
+                              ? 60
+                              : size.width < 873
+                                  ? 100
+                                  : size.width < 944
+                                      ? 150
+                                      : 183.0,
                 ),
                 child: Text(
                   'Make money in minutes with fun, easy tasks. From watching videos to taking surveys, Money Mingle lets you earn cash anytime, anywhere.',
@@ -128,7 +176,10 @@ class HeroSectionText extends StatelessWidget {
                   style: CustomFontStyle.label.copyWith(
                     color: ColorsTheme.primaryWhite50,
                   ),
-                  key: SeoKey(TagType.h1, text: 'Make money in minutes with fun, easy tasks. From watching videos to taking surveys, Money Mingle lets you earn cash anytime, anywhere.',
+                  key: SeoKey(
+                    TagType.h1,
+                    text:
+                        'Make money in minutes with fun, easy tasks. From watching videos to taking surveys, Money Mingle lets you earn cash anytime, anywhere.',
                   ),
                 ),
               ),

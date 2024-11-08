@@ -105,6 +105,7 @@ class _LandingPageState extends State<LandingPage> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     const radians = pi / 180;
     if (kIsWeb) {
       // Define MetaSEO object
